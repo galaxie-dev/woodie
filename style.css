@@ -2458,3 +2458,394 @@ body.dark-mode .footer-links a:hover {
   background-color: #111 !important;
   color: #aaa !important;
 }
+
+
+
+
+
+
+
+/* ========== MOBILE OPTIMIZATION ========== */
+@media (max-width: 768px) {
+  /* General Mobile Adjustments */
+  body {
+    padding-top: 60px;
+  }
+  
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Navigation */
+  .navbar {
+    padding: 12px 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-collapse {
+    background-color: var(--cream);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .carousel-item {
+    height: 80vh;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    left: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-hero {
+    width: 100%;
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    padding: 2rem 0;
+  }
+  
+  .stat-item {
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  /* Product Showcase */
+  .product-showcase {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    padding: 0 15px;
+  }
+  
+  .section-subtitle {
+    padding: 0 15px;
+    margin-bottom: 2rem;
+  }
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .col-lg-4, .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .product-card {
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .product-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .product-img {
+    height: 250px;
+    border-radius: 0;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Collections Section */
+  .collections-section {
+    padding: 2rem 0;
+  }
+  
+  .collections-section .card {
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .collections-section .card-img-top {
+    height: 200px;
+    border-radius: 0;
+  }
+  
+  /* Testimonials */
+  .testimonial-section {
+    padding: 2rem 0;
+  }
+  
+  .testimonial {
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  /* Craftsmanship */
+  .craftsmanship-section {
+    padding: 2rem 0;
+  }
+  
+  .craftsmanship-img {
+    height: 300px;
+    border-radius: 0;
+  }
+  
+  /* Sustainability */
+  .sustainability-section {
+    padding: 2rem 0;
+  }
+  
+  .sustainability-card {
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  /* Process Timeline */
+  .process-section {
+    padding: 2rem 0;
+  }
+  
+  .timeline::after {
+    left: 15px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 15px;
+  }
+  
+  .timeline-item::after {
+    left: 6px;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  /* Newsletter */
+  .newsletter-section {
+    padding: 2rem 15px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    min-width: 100%;
+  }
+  
+  /* Instagram */
+  .instagram-section {
+    padding: 2rem 0;
+  }
+  
+  .instagram-img {
+    height: 120px;
+    border-radius: 0;
+  }
+
+  
+  .footer-links {
+    margin-bottom: 2rem;
+  }
+  
+  /* Dark Mode Toggle */
+  .dark-toggle {
+    bottom: 70px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  /* Back to Top */
+  .back-to-top {
+    right: 15px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  /* Full Width Cards */
+  .card, .product-card, .sustainability-card, .testimonial {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+  
+  /* Remove all side margins/paddings for full-width effect */
+  .row.g-4, .row {
+    --bs-gutter-x: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .col-md-4, .col-md-3, .col-6, .col-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Mobile App-like enhancements */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Button tap feedback */
+  .btn:active {
+    transform: scale(0.96);
+  }
+  
+  /* Card tap feedback */
+  .card:active, .product-card:active {
+    opacity: 0.9;
+  }
+  
+  /* Hide carousel indicators on mobile */
+  .carousel-indicators {
+    display: none;
+  }
+  
+  /* Adjust carousel controls */
+  .carousel-control-prev, .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
+  
+  /* Typography adjustments */
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+  
+  /* Remove all hover effects on mobile */
+  .product-card:hover .product-img,
+  .hover-zoom:hover img,
+  .craftsmanship-img-container:hover .craftsmanship-img,
+  .instagram-img:hover,
+  .sustainability-card:hover,
+  .testimonial:hover,
+  .timeline-item:hover .timeline-content,
+  .craftsmanship-feature:hover {
+    transform: none !important;
+  }
+  
+  /* Add touch-friendly sizes */
+  a, button, .btn, .nav-link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve form input sizes */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .product-img, .collections-section .card-img-top {
+    height: 200px;
+  }
+  
+  .craftsmanship-img {
+    height: 250px;
+  }
+  
+  .instagram-img {
+    height: 100px;
+  }
+  
+  /* Stack all columns on very small screens */
+  .col-md-4, .col-md-3, .col-6, .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Adjust stats layout */
+  .stats-section .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Mobile-specific interactions */
+@media (hover: none) {
+  /* Disable hover effects on touch devices */
+  .product-card:hover, 
+  .btn:hover, 
+  .nav-link:hover,
+  .hover-zoom:hover,
+  .instagram-img:hover,
+  .sustainability-card:hover,
+  .testimonial:hover,
+  .timeline-item:hover .timeline-content,
+  .craftsmanship-feature:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Show active state instead */
+  .btn:active, .card:active {
+    transform: scale(0.96);
+    opacity: 0.9;
+  }
+}
