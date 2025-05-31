@@ -62,52 +62,61 @@
   </nav>
 
   <!-- Hero Section with Carousel -->
+  
   <section class="hero">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Indicators -->
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+
+      <!-- Carousel Items -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" alt="Sustainable Furniture">
-          <div class="carousel-caption hero-content animate-text">
-            <h1 class="typewriter">Timeless Furniture, Sustainably Crafted</h1>
-            <p class="fade-in">Handcrafted pieces designed to last a lifetime. Ethically sourced materials, responsible manufacturing.</p>
-            <div class="slide-up">
+          <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" alt="Sustainable Furniture">
+          <div class="carousel-caption hero-content">
+            <h1 class="animate-text">Timeless Furniture, Sustainably Crafted</h1>
+            <p class="fade-in">Handcrafted pieces designed to last a lifetime with ethically sourced materials.</p>
+            <div class="hero-buttons">
               <a href="#shop" class="btn btn-hero btn-shop">Shop Collection</a>
               <a href="#craftsmanship" class="btn btn-hero btn-explore">Our Process</a>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" class="d-block w-100" alt="Living Room Collection">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" class="d-block w-100" alt="Living Room Collection">
           <div class="carousel-caption hero-content">
-            <h1 class="slide-right">New Spring Collection</h1>
-            <p class="fade-in-delay">Fresh designs inspired by nature's renewal. Limited edition pieces available now.</p>
-            <div class="slide-up-delay">
+            <h1 class="animate-text">New Spring Collection</h1>
+            <p class="fade-in">Fresh designs inspired by nature’s renewal. Limited edition pieces available now.</p>
+            <div class="hero-buttons">
               <a href="#collections" class="btn btn-hero btn-shop">View Collection</a>
               <a href="#newsletter" class="btn btn-hero btn-explore">Get Updates</a>
             </div>
           </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1583845112203-29329902330e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" alt="Bedroom Collection">
-          <div class="carousel-caption hero-content">
-            <h1 class="slide-left">Bedroom Essentials</h1>
-            <p class="fade-in">Create your sanctuary with our organic bedroom collection.</p>
-            <div class="slide-up">
-              <a href="#collections" class="btn btn-hero btn-shop">Shop Bedroom</a>
-              <a href="#testimonials" class="btn btn-hero btn-explore">See Reviews</a>
-            </div>
-          </div>
         </div>
+  
+      <div class="carousel-item">      
+          <img src="https://images.unsplash.com/photo-1583845112203-29329902330e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" alt="Bedroom Collection">
+            <div class="carousel-caption hero-content">
+                <h1 class="animate-text">Bedroom Essentials</h1>
+                <p class="fade-in">Create your sanctuary with our organic bedroom collection.</p>
+                <div class="hero-buttons">
+                <a href="#collections" class="btn btn-hero btn-shop">Shop Bedroom</a>
+                <a href="#testimonials" class="btn btn-hero btn-explore">See Reviews</a>
+                </div>
+            </div>
+</div>
+
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous Slide">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next Slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </button>
     </div>
   </section>
@@ -157,7 +166,7 @@
             <div class="card-body">
               <h5 class="card-title product-title">Walnut Dining Table</h5>
               <p class="card-text product-meta">Solid walnut | FSC-certified</p>
-              <p class="card-text product-price">KES 590.200</p>
+              <p class="card-text product-price">KES 590,200</p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-shop">Add to Cart</a>
                 <a href="#" class="btn btn-outline-dark">View Details</a>
@@ -209,6 +218,38 @@
       <p class="section-subtitle fade-in">Designed for modern living while honoring traditional craftsmanship.</p>
       
       <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 rounded-0 hover-zoom">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" class="card-img-top" alt="Living Room Collection">
+            <div class="card-body text-center">
+              <h3 class="h5">Living Spaces</h3>
+              <p class="text-muted">Sofas, chairs, and tables for your gathering spaces</p>
+              <a href="#" class="btn btn-link">Explore</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 rounded-0 hover-zoom">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Dining Collection">
+            <div class="card-body text-center">
+              <h3 class="h5">Dining</h3>
+              <p class="text-muted">Tables and chairs for memorable meals</p>
+              <a href="#" class="btn btn-link">Explore</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 rounded-0 hover-zoom">
+            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80" class="card-img-top" alt="Bedroom Collection">
+            <div class="card-body text-center">
+              <h3 class="h5">Bedroom</h3>
+              <p class="text-muted">Beds and storage for restful nights</p>
+              <a href="#" class="btn btn-link">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="row g-4">
         <div class="col-md-4">
           <div class="card border-0 rounded-0 hover-zoom">
             <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" class="card-img-top" alt="Living Room Collection">
