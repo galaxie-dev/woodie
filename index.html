@@ -302,7 +302,7 @@
                 <i class="bi bi-star-fill"></i>
               </div>
               <p class="testimonial-text">"The walnut dining table exceeded all expectations. The craftsmanship is impeccable, and it's become the centerpiece of our home. Worth every penny for sustainable, heirloom-quality furniture."</p>
-              <p class="testimonial-author">- Sarah & Michael J.</p>
+              <p class="testimonial-author">- Atula O.</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -315,7 +315,7 @@
                 <i class="bi bi-star-fill"></i>
               </div>
               <p class="testimonial-text">"After years of disposable furniture, investing in Woodie pieces has transformed how I think about my home. The sofa is incredibly comfortable and the natural materials make me feel good about my purchase."</p>
-              <p class="testimonial-author">- James T.</p>
+              <p class="testimonial-author">- Evans O.</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -328,7 +328,7 @@
                 <i class="bi bi-star-fill"></i>
               </div>
               <p class="testimonial-text">"The customer service was outstanding when I had questions about customizing my bed frame. The finished product is even better than I imagined and arrived right on schedule."</p>
-              <p class="testimonial-author">- Priya K.</p>
+              <p class="testimonial-author">- Osumba E.</p>
             </div>
           </div>
         </div>
@@ -584,7 +584,7 @@
         </div>
       </div>
       <div class="footer-bottom fade-in">
-        <p>&copy; 2025 Woodie Furniture. All rights reserved. Handcrafted with ♥ in Portland, OR.</p>
+        <p>&copy; 2025 Woodie Furniture. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -595,6 +595,271 @@
   <!-- Scripts -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    // Dark mode toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', function() {
+  body.classList.toggle('dark-mode');
+  
+  // Animate the toggle icon
+  if (body.classList.contains('dark-mode')) {
+    gsap.to(this, {
+      rotate: 360,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+    this.innerHTML = '<i class="bi bi-sun"></i>';
+  } else {
+    gsap.to(this, {
+      rotate: -360,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+    this.innerHTML = '<i class="bi bi-moon"></i>';
+  }
+  
+  // Animate the transition
+  gsap.to(body, {
+    backgroundColor: body.classList.contains('dark-mode') ? '#1a1a1a' : '#ffffff',
+    color: body.classList.contains('dark-mode') ? '#f0f0f0' : '#333333',
+    duration: 0.5,
+    ease: "power2.inOut"
+  });
+});
+
+
+
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 300) {
+    gsap.to(backToTop, {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  } else {
+    gsap.to(backToTop, {
+      opacity: 0,
+      y: 20,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  }
+});
+
+backToTop.addEventListener('click', function(e) {
+  e.preventDefault();
+  gsap.to(window, {
+    scrollTo: 0,
+    duration: 1,
+    ease: "power2.inOut"
+  });
+});
+
+
+
+
+// Newsletter form animation
+const newsletterForm = document.querySelector('.newsletter-form');
+const newsletterInput = document.querySelector('.newsletter-input');
+
+newsletterInput.addEventListener('focus', function() {
+  gsap.to(newsletterForm, {
+    boxShadow: '0 0 0 2px rgba(212, 163, 115, 0.5)',
+    duration: 0.3,
+    ease: "power2.out"
+  });
+});
+
+newsletterInput.addEventListener('blur', function() {
+  gsap.to(newsletterForm, {
+    boxShadow: 'none',
+    duration: 0.3,
+    ease: "power2.out"
+  });
+});
+
+
+
+// Typewriter effect for newsletter title
+const typewriterTitle = document.querySelector('.typewriter');
+if (typewriterTitle) {
+  const text = typewriterTitle.textContent;
+  typewriterTitle.textContent = '';
+  
+  gsap.to(typewriterTitle, {
+    duration: 2,
+    text: {
+      value: text,
+      speed: 1,
+      delimiter: ''
+    },
+    ease: "none",
+    scrollTrigger: {
+      trigger: typewriterTitle,
+      start: "top 80%",
+      toggleActions: "play none none none"
+    }
+  });
+}
+
+
+// Initialize ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate elements when they come into view
+function setupScrollAnimations() {
+  // Section titles
+  gsap.utils.toArray('.section-title').forEach(title => {
+    gsap.from(title, {
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    });
+  });
+  
+  // Section subtitles
+  gsap.utils.toArray('.section-subtitle').forEach(subtitle => {
+    gsap.from(subtitle, {
+      scrollTrigger: {
+        trigger: subtitle,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      delay: 0.3,
+      ease: "power2.out"
+    });
+  });
+  
+  // Product cards
+  gsap.utils.toArray('.product-card').forEach((card, i) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: "back.out(1)"
+    });
+  });
+  
+  // Stats counter animation
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.textContent.match(/%|\+/) ? counter.textContent.match(/%|\+/)[0] : '';
+    
+    ScrollTrigger.create({
+      trigger: counter,
+      start: "top 80%",
+      onEnter: () => {
+        gsap.to(counter, {
+          innerText: target,
+          duration: 2,
+          ease: "power1.out",
+          snap: { innerText: 1 },
+          modifiers: {
+            innerText: function(innerText) {
+              return Math.floor(innerText) + suffix;
+            }
+          }
+        });
+      }
+    });
+  });
+  
+  // Craftsmanship features
+  gsap.utils.toArray('.craftsmanship-feature').forEach((feature, i) => {
+    gsap.from(feature, {
+      scrollTrigger: {
+        trigger: feature,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      x: i % 2 === 0 ? -50 : 50,
+      opacity: 0,
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: "power2.out"
+    });
+  });
+  
+  // Sustainability cards
+  gsap.utils.toArray('.sustainability-card').forEach((card, i) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: "back.out(1.7)"
+    });
+  });
+  
+  // Timeline items
+  gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      x: i % 2 === 0 ? -100 : 100,
+      opacity: 0,
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: "power2.out"
+    });
+  });
+  
+  // Instagram images
+  gsap.utils.toArray('.instagram-img').forEach((img, i) => {
+    gsap.from(img, {
+      scrollTrigger: {
+        trigger: img,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      scale: 0,
+      rotation: i % 2 === 0 ? -10 : 10,
+      duration: 0.6,
+      delay: i * 0.05,
+      ease: "back.out(1.7)"
+    });
+  });
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  setupScrollAnimations();
+});
+
+
+
+  </script>
   
 </body>
 </html>

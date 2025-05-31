@@ -512,9 +512,6 @@ img {
 
 
 
-
-
-
 /* ========== STATS SECTION ENHANCEMENTS ========== */
 .stats-section {
   background-color: var(--dark-brown);
@@ -702,6 +699,9 @@ img {
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
+
+
+
 
 /* ========== COLLECTIONS SECTION ENHANCEMENTS ========== */
 .collections-section {
@@ -2414,4 +2414,47 @@ body.dark-mode .footer-links a:hover {
     background-color: white !important;
     color: black !important;
   }
+}
+
+
+
+
+
+/* Dark Mode Styles */
+.dark-mode {
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #f0f0f0;
+  --medium-brown: #c99a6d;
+}
+
+.dark-mode .navbar {
+  background-color: rgba(30, 30, 30, 0.95) !important;
+}
+
+.dark-mode .card,
+.dark-mode .product-card {
+  background-color: #2a2a2a;
+  border-color: #333;
+}
+
+.dark-mode .product-title,
+.dark-mode .product-price,
+.dark-mode .card-title,
+.dark-mode .card-text {
+  color: #f0f0f0 !important;
+}
+
+.dark-mode .btn-outline-dark {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+.dark-mode .btn-outline-dark:hover {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.dark-mode .footer {
+  background-color: #111 !important;
+  color: #aaa !important;
 }
